@@ -1,18 +1,15 @@
 export const SelectProvincies = ({ cityes, showPopulationSelected }) => {
 
-    const arrayCityes4Length = Object.values(cityes).filter((e, index) => {
-        if (index < 4) {
-            return e;
-        }
-    })
+    const provincias = Object.values(cityes).map(e => e.provincia);
+    const noRepe = Array.from(new Set(provincias));
 
     return (
         <div>
             <select onChange={showPopulationSelected}>
-                {Object.values(arrayCityes4Length).map(e => {
+                {noRepe.map(e => {
                     return (
                         <>
-                            <option value={e.provincia}>{e.provincia}</option>
+                            <option value={e}>{e}</option>
                         </>
                     )
                 })}
