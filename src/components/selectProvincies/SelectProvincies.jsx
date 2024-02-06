@@ -1,4 +1,4 @@
-export const SelectProvincies = ({ cityes, showPopulation }) => {
+export const SelectProvincies = ({ cityes, showPopulationSelected }) => {
 
     const arrayCityes4Length = Object.values(cityes).filter((e, index) => {
         if (index < 4) {
@@ -8,7 +8,7 @@ export const SelectProvincies = ({ cityes, showPopulation }) => {
 
     return (
         <div>
-            <select onChange={showPopulation}>
+            <select onChange={showPopulationSelected}>
                 {Object.values(arrayCityes4Length).map(e => {
                     return (
                         <>

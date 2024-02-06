@@ -20,8 +20,9 @@ export const App = () => {
     setOrder([CIUTATS_CAT_20K]);
   }
 
-  function showPopulation(event) {
-    console.log(event.target.value)
+  function showPopulationSelected(event) {
+    const showPoblations = Object.values(CIUTATS_CAT_20K).filter(e => e.provincia === event.target.value);
+    setOrder([showPoblations]);
   }
 
 
@@ -31,7 +32,7 @@ export const App = () => {
       <div className="flex justify-center gap-10">
         <ButtonOrder ordernarMunicipios={ordernarMunicipios} name={'Ordernar Municipios'} />
         <ButtonOrder ordernarMunicipios={defaultOrder} name={'Default'} />
-        <SelectProvincies cityes={CIUTATS_CAT_20K} showPopulation={showPopulation} />
+        <SelectProvincies cityes={CIUTATS_CAT_20K} showPopulationSelected={showPopulationSelected} />
       </div>
       <div className="flex justify-center">
         <table className="">
