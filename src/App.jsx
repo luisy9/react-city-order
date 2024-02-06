@@ -20,8 +20,8 @@ export const App = () => {
     setOrder([CIUTATS_CAT_20K]);
   }
 
-  function showPopulation() {
-    
+  function showPopulation(event) {
+    console.log(event.target.value)
   }
 
 

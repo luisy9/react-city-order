@@ -8,7 +8,7 @@ export const SelectProvincies = ({ cityes, showPopulation }) => {
 
     return (
         <div>
-            <select value={this.state.value} onChange={showPopulation}>
+            <select onChange={showPopulation}>
                 {Object.values(arrayCityes4Length).map(e => {
                     return (
                         <>
